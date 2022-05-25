@@ -1,1 +1,1 @@
-# challenge-8
+# school fees management project continuation
