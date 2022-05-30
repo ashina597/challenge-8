@@ -1,3 +1,2 @@
 # school fees management project continuation
-implements angular routing
-implements angular animation
+implements angular routing and angular animation
