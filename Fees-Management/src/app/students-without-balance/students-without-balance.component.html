@@ -1,0 +1,17 @@
+<div class='container'>
+  <input type="text" class="search" placeholder="Search .." [(ngModel)]="searchstring">
+  <div class="header">
+    <p>Reg No</p>
+    <p>Name</p>
+    <p>Balance</p>
+  </div>
+ <div *ngIf="students">
+  <div *ngFor="let student of students |sort | search:searchstring">
+    <div class="data" *ngIf="student.balance<1">
+      <p>{{student.reg_no}}</p>
+      <p>{{student.name}}</p>
+      <p>{{student.balance}}</p>
+    </div>
+ </div>
+  </div>
+</div>

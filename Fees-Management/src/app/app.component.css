@@ -1,0 +1,42 @@
+.container{
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.body{
+  display:flex;
+}
+
+.navbar{
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  background-color: maroon;
+  color: white;
+  padding: 20px;
+}
+
+.display{
+  width: 70vw;
+  height: auto;
+}
+
+.option{
+  width: 90%;
+  height: 30px;
+  padding: 10px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.a-selected{
+  background-color: rgb(212, 28, 28);
+  padding: 10px;
+}
+

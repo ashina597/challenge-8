@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<div class="container">
+  <div *ngIf="!student">
+    <span>student is not available</span>
+  </div>
+  <div class="details" *ngIf="student">
+    <table>
+      <tr>
+        <td><b>Reg No:</b></td>
+        <td>{{student.reg_no}}</td>
+      </tr>
+      <tr>
+        <td><b>Name:</b></td>
+        <td>{{student.name}}</td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td>{{student.email}}</td>
+      </tr>
+      <tr>
+        <td><b>Phone No:</b> </td>
+        <td>{{student.phone_no}}</td>
+      </tr>
+      <tr>
+        <td><b>Gender:</b></td>
+        <td>{{student.gender}}</td>
+      </tr>
+      <tr>
+        <td><b>School:</b> </td>
+        <td>{{student.school}}</td>
+      </tr>
+      <tr>
+        <td><b>Course:</b></td>
+        <td>{{student.course}}</td>
+      </tr>
+      <tr>
+        <td><b>Balance:</b></td>
+        <td> {{student.balance}}</td>
+      </tr>
+    </table>
+    <button type="button" class="edit" (click)="edit()">Edit</button>
+    <button type="button" class="delete" (click)="delete()">Delete</button>
+  </div>
+</div>
+

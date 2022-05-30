@@ -1,0 +1,28 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="body">
+    <div class="navbar">
+      <h2>Menu</h2>
+      <hr>
+      <div class="option" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="a-selected" >
+        <a  routerLink="" >Home</a>
+      </div>
+      <div class="option" routerLinkActive="a-selected" >
+      <a routerLink="addstudent">Add Student</a>
+    </div>
+    <div class="option" routerLinkActive="a-selected">
+      <a routerLink="students">All Students</a>
+    </div>
+    <div class="option" routerLinkActive="a-selected">
+      <a routerLink="studentsWithBalance">Students With Balance</a>
+    </div>
+    <div class="option" routerLinkActive="a-selected">
+      <a routerLink="studentsWithoutBalance">Students Without Balance</a>
+    </div>
+    </div>
+    <div class="display" [@routeAnimations]="getRouteAnimationData()">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

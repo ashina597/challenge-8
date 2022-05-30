@@ -1,0 +1,16 @@
+<div class="container">
+<form class="form" #form="ngForm" (ngSubmit)="onsubmit()">
+  <h2>Edit student</h2>
+  <hr>
+  <div *ngIf="student">
+  <p><b>Reg No: </b>{{student.reg_no}}</p>
+  <p><b>Name: </b>{{student.name}}</p>
+  <div class="formgroup">
+    <span class="error" *ngIf="balance.invalid && balance.touched">*Please enter balance</span><br>
+    <label for="balance"><b>Balance: </b></label>
+    <input id="balance" type="number" ngModel name="balance" #balance="ngModel" required>
+  </div>
+  <button [disabled]="form.invalid" type="submit">Edit</button>
+  </div>
+</form>
+</div>

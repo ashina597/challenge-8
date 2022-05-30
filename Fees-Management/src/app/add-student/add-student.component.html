@@ -1,0 +1,112 @@
+<div class="container">
+  <form [formGroup]="profile" (ngSubmit)="onsubmit()" class="form">
+    <h2> Add Student</h2>
+    <hr>
+    <div class="group">
+      <div class="formgroup">
+        <div *ngIf="profile.get('reg_no')?.invalid && profile.get('reg_no')?.touched" >
+          <span class="error" *ngIf="profile.get('reg_no')?.errors!['required']">
+            *Please fill in Reg no
+          </span>
+        </div>
+        <label for="reg_no">Reg No</label>
+        <input id="reg_no" type="text" class="formcontrol" formControlName="reg_no">
+      </div>
+
+      <div class="formgroup">
+        <div class="error" *ngIf="profile.get('name')?.invalid && profile.get('name')?.touched">
+          <span *ngIf="profile.get('name')?.errors!['required']">
+            *Please fill in name
+          </span>
+        </div>
+        <label for="name">Name</label>
+        <input id="name" type="text" class="formcontrol" formControlName="name">
+      </div>
+
+    </div>
+
+    <div formGroupName="contactinfo" class="group">
+
+      <div class="formgroup">
+        <div class="error" *ngIf="profile.get('contactinfo.email')?.invalid && profile.get('contactinfo.email')?.touched">
+          <span class="error" *ngIf="profile.get('contactinfo.email')?.errors!['required']">
+            *Please fill in email
+          </span>
+          <span class="error" *ngIf="profile.get('contactinfo.email')?.errors!['email']">
+            *Please enter a valid email
+          </span>
+          <span class="error" *ngIf="profile.get('contactinfo.email')?.errors!['pattern'] && !profile.get('contactinfo.email')?.errors!['email']">
+            *This email is not allowed
+          </span>
+        </div>
+        <label for="email">Email</label>
+        <input id="email" type="text" class="formcontrol" formControlName="email">
+      </div>
+
+      <div class="formgroup">
+        <div class="error" *ngIf="profile.get('contactinfo.phone_no')?.invalid && profile.get('contactinfo.phone_no')?.touched">
+          <span class="error" *ngIf="profile.get('contactinfo.phone_no')?.errors!['required']">
+            *Please fill in phone number
+          </span>
+          <span class="error" *ngIf="profile.get('contactinfo.phone_no')?.errors!['pattern']">
+            *Please fill in a valid phone number
+          </span>
+          <span class="error" *ngIf="profile.get('contactinfo.phone_no')?.errors!['maxlength']">
+            *The Phone number should not be more than 10 digits
+          </span>
+        </div>
+        <label for="phone_no">Phone No</label>
+        <input id="phone_no" type="text" class="formcontrol" formControlName="phone_no">
+      </div>
+    </div>
+
+   <div class="group">
+    <div class="formgroup">
+      <div class="error" *ngIf="profile.get('school')?.invalid && profile.get('school')?.touched">
+        <span  *ngIf="profile.get('school')?.errors!['required'] || profile.get('school')?.errors!['notAllowed']">
+          *Please select school
+        </span>
+      </div>
+      <label for="school">School</label>
+      <select id="school" type="text" class="formcontrol" formControlName="school">
+        <option value="select">--select school--</option>
+        <option *ngFor="let school of schools" value={{school}}>{{school}}</option>
+      </select>
+    </div>
+
+    <div class="formgroup">
+      <div class="error" *ngIf="profile.get('course')?.invalid && profile.get('course')?.touched">
+        <span  *ngIf="profile.get('course')?.errors!['required'] || profile.get('course')?.errors!['notAllowed']">
+          *Please select course
+        </span>
+      </div>
+      <label for="course">Course</label>
+      <select id="course" type="text" class="formcontrol" formControlName="course">
+        <option value="select">--select course--</option>
+        <option *ngFor='let course of courses' value={{course}}>{{course}}</option>
+      </select>
+    </div>
+   </div>
+
+   <div class="group">
+    <div class="formgroup">
+      <div class="error" *ngIf="profile.get('gender')?.invalid && profile.get('gender')?.touched">
+        <span  *ngIf="profile.get('gender')?.errors!['required'] || profile.get('gender')?.errors!['notAllowed']">
+          *Please select gender
+        </span>
+      </div>
+      <label for="gender">Gender</label>
+      <select id="gender" class="formcontrol" formControlName="gender" value="male">
+        <option value="select">--select gender--</option>
+      <option *ngFor="let gender of genders" value={{gender}}>{{gender}}</option>
+      </select>
+    </div>
+   </div>
+   <button type="submit" [disabled]="profile.invalid"
+   [@Trigger1]="state"
+   (mouseover)="OnMouseover()"
+   (mouseleave)="OnMouseleave()"
+   >Submit</button>
+   <span class="message">Student added successfully</span>
+  </form>
+</div>

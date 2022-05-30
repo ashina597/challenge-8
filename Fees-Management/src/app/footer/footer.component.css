@@ -1,0 +1,19 @@
+.container{
+  width: 97vw;
+  height: 20vh;
+  background-color: maroon;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+.left{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.right{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}

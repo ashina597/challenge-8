@@ -1,0 +1,28 @@
+
+.container{
+  margin: 10px;
+}
+
+.header{
+  background-color: maroon;
+  color: white;
+  width:98%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.data{
+  width:98%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px;
+}

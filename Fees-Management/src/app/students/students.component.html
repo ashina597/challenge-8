@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h3>Students</h3>
+    </div>
+    <p *ngIf="!students">No students available</p>
+    <div class="list" *ngIf="students">
+      <div class="names" *ngFor=" let student of students " routerLinkActive="name-selected">
+        <a [routerLink]="['/students', student.reg_no]" >{{student.name}}</a>
+    </div>
+    </div>
+  </div>
+  <div class="right">
+    <div *ngIf="!status" class="message">
+      <h3>Please select student to display their details</h3>
+    </div>
+    <router-outlet (activate)="activate(true)" (deactivate)="activate(false)"></router-outlet>
+  </div>
+ </div>
+

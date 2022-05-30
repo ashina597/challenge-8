@@ -1,0 +1,19 @@
+.container{
+  width: 97vw;
+  height: 20vh;
+  /* background-image: url('https://res.cloudinary.com/sagacity/image/upload/c_crop,h_416,w_625,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/FSU-625X_gr1x7l.jpg'); */
+  background-color: maroon;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+.image{
+  width: 80px;
+  height: 80px;
+}

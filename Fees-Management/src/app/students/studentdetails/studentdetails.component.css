@@ -1,0 +1,22 @@
+.material-icons.md-120{ font-size: 120px; }
+.container{
+  width: 52vw;
+  height: auto;
+  display: flex;
+  padding: 10px;
+}
+button{
+  background-color: maroon;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.details{
+  padding-left: 100px;
+}
